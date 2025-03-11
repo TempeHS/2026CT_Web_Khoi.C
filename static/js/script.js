@@ -1,38 +1,44 @@
-player_guess = prompt("rock paper scissors");
+gamerScore = "1";
+computerScore = 1;
 
-computer_guess = computerGuess();
-alert(computer_guess);
+sumScore = gamerScore + computerScore;
 
-if (player_guess == "rock" && computer_guess == 1) {
-  document.getElementById("user_feedback").innerHTML = Draw;
-}
-if (player_guess == "rock" && computer_guess_guess == 2) {
-  document.getElementById("user_feedback").innerHTML = Lose;
-}
-if (player_guess == "rock" && computer_guess == 3) {
-  document.getElementById("user_feedback").innerHTML = Win;
-}
+alert(sumScore);
 
-if (player_guess == "scissors" && computer_guess == 3) {
-  document.getElementById("user_feedback").innerHTML = Draw;
-}
-if (player_guess == "scissors" && computer_guess == 1) {
-  document.getElementById("user_feedback").innerHTML = Lose;
-}
-if (player_guess == "scissors" && computer_guess == 2) {
-  document.getElementById("user_feedback").innerHTML = Win;
-}
+function roshambo() {
+  computer_guess = computerGuess();
 
-if (player_guess == "paper" && computer_guess == 2) {
-  document.getElementById("user_feedback").innerHTML = Draw;
-}
-if (player_guess == "paper" && computer_guess == 3) {
-  document.getElementById("user_feedback").innerHTML = Lose;
-}
-if (player_guess == "paper" && computer_guess == 1) {
-  document.getElementById("user_feedback").innerHTML = Win;
-}
+  player_input = prompt("Rock Paper Scissors");
 
-function computerGuess() {
-  return Math.floor(Math.random() * 3 + 1);
+  if (player_input == "rock") {
+    player_guess = 1;
+  } else if (player_input == "paper") {
+    player_guess = 2;
+  } else {
+    player_guess = 3;
+  }
+
+  computer_up = computer_guess + 1;
+  if (computer_up > 3) {
+    computer_up = 1;
+  }
+  computer_down = computer_guess - 1;
+  if (computer_down < 1) {
+    computer_down = 3;
+  }
+
+  if (player_guess == computer_guess) {
+    document.getElementById("user_feedback").innerHTML =
+      "You Drew, you played " + player_input;
+  } else if (player_guess == computer_up) {
+    document.getElementById("user_feedback").innerHTML =
+      "You Won, you played " + player_input;
+  } else if (player_guess == computer_down) {
+    document.getElementById("user_feedback").innerHTML =
+      "You Lost, you played " + player_input;
+  }
+
+  function computerGuess() {
+    return Math.ceil(Math.random() * 3);
+  }
 }
