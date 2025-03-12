@@ -5,10 +5,10 @@ sumScore = gamerScore + computerScore;
 
 alert(sumScore);
 
-function roshambo() {
+function roshambo(input) {
   computer_guess = computerGuess();
 
-  player_input = prompt("Rock Paper Scissors");
+  player_input = input;
 
   if (player_input == "rock") {
     player_guess = 1;
