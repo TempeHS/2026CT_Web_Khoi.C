@@ -1,3 +1,15 @@
+:root {
+  --bs-primary-bg: #0d6efd; /* or any color you want */
+}
+
 .navbar-brand img {
   height: 80px;
+}
+
+.container-fluid {
+  background: var(--bs-primary-bg);
+}
+
+.nav-link {
+  color: white;
 }
