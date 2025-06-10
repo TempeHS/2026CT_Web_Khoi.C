@@ -1,41 +1,48 @@
 {% extends 'layout.html' %}{% block content %}
+<style>
+  body {
+    background: url(static/images/login.png) no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+  }
+  label {
+    color: white;
+  }
+  hr {
+    color: white;
+  }
+</style>
 <form>
-  <div class="d-flex justify-content-center align-items-center flex-column">
-    <form class="w-50">
-      <div class="d-flex flex-column w-50">
-        <div class="form-group d-flex gap-3">
-          <div class="flex-fill">
-            <label for="exampleInputEmail1">Email address</label>
-            <input
-              type="email"
-              class="form-control"
-              id="exampleInputEmail1"
-              aria-describedby="emailHelp"
-              placeholder="Enter email"
-            />
-            <small id="emailHelp" class="form-text text-muted">
-              We'll never share your email with anyone else.
-            </small>
-          </div>
-          <div class="flex-fill">
-            <label for="exampleInputPassword1">Password</label>
-            <input
-              type="password"
-              class="form-control"
-              id="exampleInputPassword1"
-              placeholder="Password"
-            />
-          </div>
-        </div>
-        <div class="form-group form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-          <label class="form-check-label" for="exampleCheck1"
-            >Check me out</label
-          >
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </div>
-    </form>
-    {% endblock %}
+  <div class="signup-bg container col-lg-4 col-md-8 col-sm-12">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input
+        type="email"
+        class="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+        placeholder="Enter Email"
+      />
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input
+        type="password"
+        class="form-control"
+        id="exampleInputPassword1"
+        placeholder="Password"
+      />
+    </div>
+    <hr />
+    <div class="form-group form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+      <label class="form-check-label" for="exampleCheck1">Remember me</label>
+    </div>
+    <br />
+    <a type="submit" class="btn btn-primary" href="index.html">Login</a>
+    <hr />
+    <label>Don't have an account?</label>
+    <a class="text-light" href="signup.html">Sign Up</a>
   </div>
 </form>
+{% endblock %}

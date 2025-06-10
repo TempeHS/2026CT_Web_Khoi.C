@@ -7,8 +7,8 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     card_data = (
-        ("About Laptops", "Learn about the features laptops have to offer", "Learn More", "static/images/Stuff/1.png"),
-        ("About Desktops", "Learn about the features desktops have to offer", "Learn More", "static/images/Stuff/2.png"),
+        ("About Laptops", "Learn about the features laptops", "Learn More", "static/images/Stuff/1.png"),
+        ("About Desktops", "Learn about the features desktops", "Learn More", "static/images/Stuff/2.png"),
         ("Quality Laptops", "Find example laptops", "Learn More", "static/images/Stuff/3.png"),
         ("Quality Desktops", "Find example desktops", "Learn More", "static/images/Stuff/4.png"),
         ("Which Is Better (For Students)", "Determine which is better for school", "Learn More", "static/images/Stuff/5.png"),
@@ -23,6 +23,18 @@ def contact():
 @app.route('/login.html')
 def login():
     return render_template("login.html"), 200
+
+@app.route('/signup.html')
+def signup():
+    return render_template("signup.html"), 200
+
+@app.route('/pricing.html')
+def pricing():
+    return render_template("pricing.html"), 200
+
+@app.route('/about_laptops.html')
+def about_laptops():
+    return render_template("about_laptops.html"), 200
 
 if __name__ == '__main__':
     app.run(debug=True)
