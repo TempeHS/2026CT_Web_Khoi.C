@@ -7,12 +7,12 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     card_data = (
-        ("About Laptops", "Learn about the features laptops", "Learn More", "static/images/Stuff/1.png"),
-        ("About Desktops", "Learn about the features desktops", "Learn More", "static/images/Stuff/2.png"),
-        ("Quality Laptops", "Find example laptops", "Learn More", "static/images/Stuff/3.png"),
-        ("Quality Desktops", "Find example desktops", "Learn More", "static/images/Stuff/4.png"),
-        ("Which Is Better (For Students)", "Determine which is better for school", "Learn More", "static/images/Stuff/5.png"),
-        ("Which Is Better (For Students)", "Determine which is better for the workplace", "Learn More", "static/images/Stuff/6.png"),
+        ("About Laptops", "Learn about the features laptops", "Learn More", "static/images/Stuff/1.png", "about_laptops.html"),
+        ("About Desktops", "Learn about the features desktops", "Learn More", "static/images/Stuff/2.png", "about_desktops.html"),
+        ("Quality Laptops", "Find example laptops", "Learn More", "static/images/Stuff/3.png", "find_laptops.html"),
+        ("Quality Desktops", "Find example desktops", "Learn More", "static/images/Stuff/4.png", "find_laptops.html"),
+        ("Which Is Better (For Students)", "Determine which is better for school", "Learn More", "static/images/Stuff/5.png", "about_laptops.html"),
+        ("Which Is Better (For Students)", "Determine which is better for the workplace", "Learn More", "static/images/Stuff/6.png", "about_laptops.html"),
     )
     return render_template("index.html", cards = card_data), 200
 
