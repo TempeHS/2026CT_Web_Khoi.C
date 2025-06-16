@@ -36,5 +36,17 @@ def pricing():
 def about_laptops():
     return render_template("about_laptops.html"), 200
 
+@app.route('/about_desktops.html')
+def about_desktops():
+    return render_template("about_desktops.html"), 200
+
+@app.route('/find_laptops.html')
+def find_laptops():
+    return render_template("find_laptops.html"), 200
+
+@app.route('/find_desktops.html')
+def find_desktops():
+    return render_template("find_desktops.html"), 200
+
 if __name__ == '__main__':
     app.run(debug=True)
