@@ -1,25 +1,40 @@
 {% extends 'layout.html' %}{% block content %}
 <div class="container">
+  <br />
+  <h1 class="d-flex justify-content-center">Contact Us</h1>
+  <hr class="divider" />
   <div class="row">
-    <div class="col-lg-6 col-md-4 col-sm-12">
-      <h1>Contact Us Brotato</h1>
-      <ul>
-        <li>Phone: 0444 444 4444</li>
-        <li>Email: Email@email.com</li>
-        <li>Address: 56 First Street</li>
-        <li>add me on facebook</li>
-      </ul>
-    </div>
-    <div class="col-lg-6 col-md-8 col-sm-12">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3311.4783039553754!2d151.11870655952242!3d-33.90308743561694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ba8b746cadfb%3A0xa2d16a7a1c38ceb9!2s56%20First%20St%2C%20Ashbury%20NSW%202193!5e0!3m2!1sen!2sau!4v1748828546450!5m2!1sen!2sau"
-        width="100%"
-        height="200%"
-        style="border: 0"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-      ></iframe>
+    <div
+      class="col-lg-8 col-md-8 col-sm-12 d-flex flex-column align-items-center"
+    >
+      <h1>Send A Message</h1>
+      <form class="w-75">
+        <div class="form-group">
+          <label for="exampleInputName1">Name</label>
+          <input
+            type="email"
+            class="form-control"
+            id="exampleInputName1"
+            aria-describedby="nameHelp"
+            placeholder="Name"
+          />
+          <label for="exampleInputEmail1">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            placeholder="Email"
+          />
+          <label for="exampleInputPhone1">Phone</label>
+          <input
+            type="tel"
+            class="form-control"
+            id="exampleInputPhone1"
+            placeholder="Phone"
+            pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+          />
+        </div>
+      </form>
     </div>
   </div>
 </div>
