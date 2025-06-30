@@ -5,6 +5,7 @@ body {
   font-weight: 400;
   font-style: normal;
   letter-spacing: 1px;
+  background-color: #d7ddf0;
 }
 
 .navbar-brand img {
@@ -75,4 +76,8 @@ label {
 .image-50 {
   width: 50%;
   height: auto;
+}
+
+.label-gray {
+  color: rgb(49, 49, 49);
 }
