@@ -15,7 +15,7 @@
           <input
             type="email"
             class="form-control"
-            id="exampleInputName1"
+            id="contactName1"
             aria-describedby="nameHelp"
             placeholder="Name"
           />
@@ -23,26 +23,27 @@
           <input
             type="email"
             class="form-control"
-            id="exampleInputEmail1"
+            id="contactEmail1"
             placeholder="Email"
           />
           <label for="exampleInputPhone1" class="label-gray">Phone</label>
           <input
             type="tel"
             class="form-control"
-            id="exampleInputPhone1"
+            id="contactPhone1"
             placeholder="Phone"
           />
           <hr />
-          <div id="liveAlertPlaceholder" class="label-gray"></div>
           <button
             type="button"
             class="btn btn-primary d-flex justify-content-center"
             id="liveAlertBtn"
-            onclick="showAlert('You sent a message!', 'primary')"
+            onclick="checkFormContact()"
           >
             Send
           </button>
+          <br />
+          <div id="liveAlertPlaceholder" class="label-gray"></div>
         </div>
       </form>
     </div>

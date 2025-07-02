@@ -32,18 +32,22 @@
       <input
         type="password"
         class="form-control"
-        id="exampleInputPassword1"
+        id="signupPassword1"
         placeholder="Password"
       />
-    </div>
-    <div class="form-group">
-      <label for="exampleInputPassword2">Confirm password</label>
+      <label for="exampleInputPassword1">Confirm password</label>
       <input
         type="password"
         class="form-control"
-        id="exampleInputPassword2"
+        id="signupPassword2"
         placeholder="Confirm Password"
       />
+      <input
+        type="checkbox"
+        class="form-check-input"
+        onclick="toggleDoublePassword('signupPassword1','signupPassword2')"
+      />
+      <label class="form-check-label" for="exampleCheck1">Show Password</label>
     </div>
     <hr />
     <div class="form-group">

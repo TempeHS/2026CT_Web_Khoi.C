@@ -6,7 +6,6 @@
     min-height: 100vh;
   }
 </style>
-<br /><br /><br /><br /><br />
 <form>
   <div class="signup-bg container col-lg-4 col-md-8 col-sm-12">
     <div class="form-group">
@@ -14,7 +13,7 @@
       <input
         type="email"
         class="form-control"
-        id="exampleInputEmail1"
+        id="loginEmail1"
         aria-describedby="emailHelp"
         placeholder="Enter Email"
       />
@@ -24,9 +23,15 @@
       <input
         type="password"
         class="form-control"
-        id="exampleInputPassword1"
+        id="loginPassword1"
         placeholder="Password"
       />
+      <input
+        type="checkbox"
+        class="form-check-input"
+        onclick="togglePassword('loginPassword1')"
+      />
+      <label class="form-check-label" for="exampleCheck1">Show Password</label>
     </div>
     <hr class="hr-white" />
     <div class="form-group form-check">
@@ -34,10 +39,24 @@
       <label class="form-check-label" for="exampleCheck1">Remember me</label>
     </div>
     <br />
-    <a type="submit" class="btn btn-primary" href="index.html">Login</a>
+    <!-- <a type="submit" class="btn btn-primary" href="index.html">Login</a> -->
+    <button
+      type="button"
+      class="btn btn-primary d-flex justify-content-center"
+      id="liveAlertBtn"
+      onclick="checkFormLogin()"
+    >
+      Login
+    </button>
+    <br />
+    <div id="liveAlertPlaceholder" class="label-gray"></div>
     <hr class="hr-white" />
     <label>Don't have an account?</label>
-    <a class="text-light" href="signup.html">Sign Up</a>
+    <a
+      class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+      href="signup.html"
+      >Sign Up</a
+    >
   </div>
 </form>
 {% endblock %}
