@@ -11,8 +11,8 @@ def index():
         ("About Desktops", "Learn about the features desktops", "Learn More", "static/images/Stuff/2.png", "about_desktops.html"),
         ("Quality Laptops", "Find example laptops", "Learn More", "static/images/Stuff/3.png", "find_laptops.html"),
         ("Quality Desktops", "Find example desktops", "Learn More", "static/images/Stuff/4.png", "find_laptops.html"),
-        ("Which Is Better (For Students)", "Determine which is better for school", "Learn More", "static/images/Stuff/5.png", "about_laptops.html"),
-        ("Which Is Better (For Students)", "Determine which is better for the workplace", "Learn More", "static/images/Stuff/6.png", "about_laptops.html"),
+        ("Which Is Better (For Students)", "Determine which is better for school", "Learn More", "static/images/Stuff/5.png", "compare_student.html"),
+        ("Which Is Better (For Employees)", "Determine which is better for the workplace", "Learn More", "static/images/Stuff/6.png", "compare_employee.html"),
     )
     return render_template("index.html", cards = card_data), 200
 
@@ -47,6 +47,14 @@ def find_laptops():
 @app.route('/find_desktops.html')
 def find_desktops():
     return render_template("find_desktops.html"), 200
+
+@app.route('/compare_student.html')
+def compare_student():
+    return render_template("compare_student.html"), 200
+
+@app.route('/compare_employee.html')
+def compare_employee():
+    return render_template("compare_employee.html"), 200
 
 if __name__ == '__main__':
     app.run(debug=True)
